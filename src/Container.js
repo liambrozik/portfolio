@@ -120,7 +120,7 @@ class Container extends Component {
       }, 1000); 
       setTimeout(() => {
         this.setState({
-            limarginLeft: '7.5vw',
+            limarginLeft: (window.matchMedia("(min-width: 1350px)").matches) ? '7.5vw' : (window.matchMedia("(max-width: 1015px)").matches) ? '1vw' : '3vw',
             contentzoneTop: '40px',
             homeTop: '19px'
         });

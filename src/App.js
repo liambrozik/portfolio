@@ -7,12 +7,12 @@ class App extends Component {
     super(props);
 
     this.state = {
-        cWidth: '500px',
-        cHeight: '500px',
-        marginLeft: '50vw',
-        marginTop: '50vh',
-        transform: 'translate(-250px, 15vh)',
-        radius: '80px'
+        cWidth: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vw',
+        cHeight: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vh',
+        marginLeft: (window.matchMedia("(min-width: 550px)").matches) ? '50vw' : '0',
+        marginTop: (window.matchMedia("(min-width: 550px)").matches) ? '50vh' : '0',
+        transform: (window.matchMedia("(min-width: 550px)").matches) ? 'translate(-250px, 15vh)' : 'none',
+        radius: (window.matchMedia("(min-width: 550px)").matches) ? '80px' : '0'
     };
   }
 
@@ -49,12 +49,12 @@ class App extends Component {
 
   onHome() {
     this.setState({
-      cWidth: '500px',
-      cHeight: '500px',
-      marginLeft: '50vw',
-      marginTop: '50vh',
-      transform: 'translate(-250px, 15vh)',
-      radius: '80px'
+      cWidth: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vw',
+      cHeight: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vh',
+      marginLeft: (window.matchMedia("(min-width: 550px)").matches) ? '50vw' : '0',
+      marginTop: (window.matchMedia("(min-width: 550px)").matches) ? '50vh' : '0',
+      transform: (window.matchMedia("(min-width: 550px)").matches) ? 'translate(-250px, 15vh)' : 'none',
+      radius: (window.matchMedia("(min-width: 550px)").matches) ? '80px' : '0'
   });
   }
 
