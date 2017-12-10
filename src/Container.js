@@ -14,76 +14,88 @@ class Container extends Component {
         super(props);
         this.state = {
             mode: 'Portfolios',
-            margin: this.props.margin,
-            avatarFloat: 'none',
-            avatarMarginLeft: '-310px',
-            avatarMarginTop: '30px',
-            avatarSize: '125',
-            headerPaddingLeft: '40px',
-            headerMarginTop: '0px',
-            headerFontSize: '48px',
-            titlePWidth: '150px',
-            titleWidth: '75',
-            titleMarginTop: '40px',
-            aboutOpacity: '1',
-            buttonOpacity: '1',
-            titleOpacity: '1',
             bgcolor: 'rgb(220, 220, 220)',
             color: 'rgb(37, 37, 37)',
-            showWelcome: true, 
-            limarginLeft: '-50vw',
-            contentzoneTop: '-100vh',
-            homeTop: '-100px',
-            aboutHeight: '1px'
         };
     }
 
   render() {
     return (
-      <div className="Container" style={{
-          backgroundColor: this.state.bgcolor,
+      <div 
+        className="Container" 
+        style={{
           overflow: 'hidden',
+
+          backgroundColor: this.state.bgcolor,
           color: this.state.color,
-          width: this.props.width,
-          height: this.props.height,
-          marginLeft: this.props.marginLeft,
-          transform: this.props.transform,
-          transition: 'width 1s, height 1s, margin-left 1s, border-radius 1s, transform 1s, background-color 1s, color 1s',
-          borderRadius: this.props.radius
-      }}>
-        <Avatar size={this.state.avatarSize} float={this.state.avatarFloat} marginLeft={this.state.avatarMarginLeft} marginTop={this.state.avatarMarginTop}/>
-        <Header text="Liam Brozik" paddingLeft={this.state.headerPaddingLeft} fontSize={this.state.headerFontSize} marginTop={this.state.headerMarginTop} color={this.state.color} />
-        {
-            !this.state.showWelcome ? <HomeBtn top={this.state.homeTop} onHome={() => this.onHome()}/> : null
-        }
-        {
-            this.state.showWelcome ? <About opacity={this.state.aboutOpacity} height={this.state.aboutHeight}/> : null
-        }
+          width: this.props.VIEW === "HOME" ? 
+          ((window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vw') 
+          : '100vw',
+          height: this.props.VIEW === "HOME" ? 
+          ((window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vh') 
+          : '100vh',
+          marginLeft: this.props.VIEW === "HOME" ?
+          (window.matchMedia("(min-width: 550px)").matches) ? '50vw' : '0'
+          : '0vw',
+          transform: this.props.VIEW === "HOME" ? 
+          (window.matchMedia("(min-width: 550px)").matches) ? 'translate(-250px, 15vh)' : 'none'
+          : 'translate(0px, 0vh)',
+          borderRadius: this.props.VIEW === "HOME" ? 
+          (window.matchMedia("(min-width: 550px)").matches) ? '80px' : '0'
+          : '0',
+          willChange: 'width, height, margin-left, margin-top, border-radius, background-color, transform, color',
+          transition: 'width 1000ms, height 1000ms, margin-left 1000ms, border-radius 1000ms, transform 1000ms, background-color 1000ms, color 1000ms'
+        }}
+      >
 
-        <Title text={this.state.mode} width={this.state.titleWidth} pwidth={this.state.titlePWidth} marginTop={this.state.titleMarginTop} color={this.state.color} bgcolor={this.state.bgcolor} opacity={this.state.titleOpacity} />
+        <Avatar 
+            VIEW={this.props.VIEW} 
+        />
 
-        {
-            this.state.showWelcome ? <Button text="Web Development" width="180" height="60" onClick={(info) => this.handlePortfolioClick(info)} opacity={this.state.buttonOpacity} /> : null
-        }
-        {
-            this.state.showWelcome ? <Button text="Video" width="180" height="60" onClick={(info) => this.handlePortfolioClick(info)} opacity={this.state.buttonOpacity} /> : null
-        }
-        {
-            !this.state.showWelcome ? <Navlist current="1" limarginLeft={this.state.limarginLeft} mode={this.state.mode}/> : null
-        }
+        <Header 
+            text="Liam Brozik" 
+            VIEW={this.props.VIEW}
+            color={this.state.color} 
+        />
 
-{
-            !this.state.showWelcome ? <ContentZone top={this.state.contentzoneTop}/> : null
-        }
-
-        
+        <HomeBtn 
+            VIEW={this.props.VIEW}
+            onHome={() => this.onHome()}
+        /> 
+        <About
+                VIEW={this.props.VIEW}
+        /> 
+        <Title 
+            VIEW={this.props.VIEW}
+            text={this.state.mode} 
+            color={this.state.color} 
+            bgcolor={this.state.bgcolor} 
+        />
+        <Button 
+            VIEW={this.props.VIEW}
+            text="Web Development" 
+            width="180" 
+            height="60" 
+            onClick={(info) => this.handlePortfolioClick(info)} 
+        /> 
+        <Button 
+            VIEW={this.props.VIEW}
+            text="Video" 
+            width="180" 
+            height="60" 
+            onClick={(info) => this.handlePortfolioClick(info)} 
+        /> 
+        <Navlist 
+            VIEW={this.props.VIEW}
+            current="1" 
+            mode={this.state.mode}
+        /> 
+        <ContentZone
+            VIEW={this.props.VIEW} 
+        /> 
       </div>
     );
     }
-
-  componentWillUnmount() {
-
-  }
 
   handlePortfolioClick(info) {
       this.props.handleClick(info);
@@ -93,73 +105,23 @@ class Container extends Component {
             color: 'rgb(220, 220, 220)'
           });
       }
-      this.setState({
-        aboutOpacity: '0',
-        buttonOpacity: '0',
-        titleOpacity: '0',
-        headerPaddingLeft: '5vw',
-        headerMarginTop: '-55px',
-        headerFontSize: '24px', 
-        avatarMarginLeft: '-95vw',
-        avatarMarginTop: '5px',
-        avatarSize: '65',
-        titlePWidth: '350px',
-        titleWidth: '50',
-        titleMarginTop: '-220px',
-      });
       setTimeout(() => {
         this.setState({
-            titleMarginTop: '-13px',
-            titleOpacity: '1',
             mode: info, 
-            showWelcome: false,
-            limarginLeft: '-50vw',
-            contentzoneTop: '100vh',
-            homeTop: '-100px'
         });
       }, 1000); 
-      setTimeout(() => {
-        this.setState({
-            limarginLeft: (window.matchMedia("(min-width: 1350px)").matches) ? '7.5vw' : (window.matchMedia("(max-width: 1015px)").matches) ? '1vw' : '3vw',
-            contentzoneTop: '40px',
-            homeTop: '19px'
-        });
-      }, 1500); 
     }
 
     onHome() {
         this.props.onHome();
         this.setState({
-            limarginLeft: '-50vw',
-            contentzoneTop: '100vh',
-            mode: 'Portfolios',
-            margin: this.props.margin,
-            avatarFloat: 'none',
-            avatarMarginLeft: '-310px',
-            avatarMarginTop: '30px',
-            avatarSize: '125',
-            headerPaddingLeft: '40px',
-            headerMarginTop: '0px',
-            headerFontSize: '48px',
-            titlePWidth: '150px',
-            titleWidth: '75',
-            titleMarginTop: '40px',
-            aboutOpacity: '0',
-            buttonOpacity: '0',
-            titleOpacity: '0',
             bgcolor: 'rgb(220, 220, 220)',
-            color: 'rgb(37, 37, 37)',
-            limarginLeft: '-50vw',
-            homeTop: '-100px',
-            aboutHeight: '1px'
+            color: 'rgb(37, 37, 37)'
         });
 
         setTimeout(() => {
             this.setState({
-                showWelcome: true,
-                aboutOpacity: '1',
-                buttonOpacity: '1',
-                titleOpacity: '1'
+                mode: 'Portfolios'
             });
           }, 1000); 
     };

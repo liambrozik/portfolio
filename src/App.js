@@ -7,19 +7,16 @@ class App extends Component {
     super(props);
 
     this.state = {
-        cWidth: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vw',
-        cHeight: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vh',
-        marginLeft: (window.matchMedia("(min-width: 550px)").matches) ? '50vw' : '0',
-        marginTop: (window.matchMedia("(min-width: 550px)").matches) ? '50vh' : '0',
-        transform: (window.matchMedia("(min-width: 550px)").matches) ? 'translate(-250px, 15vh)' : 'none',
-        radius: (window.matchMedia("(min-width: 550px)").matches) ? '80px' : '0'
+        VIEW: "HOME",
     };
   }
 
   render() {
     return (
       <div className="App" style={{backgroundColor: 'rgb(235, 235, 235)'}}>
-        <Container width={this.state.cWidth} height={this.state.cHeight} onHome={() => this.onHome()} handleClick={(info) => this.handlePortfolioClick(info)} marginTop={this.state.marginTop} marginLeft={this.state.marginLeft} transform={this.state.transform} radius={this.state.radius}/>
+        <Container VIEW={this.state.VIEW} 
+        handleClick={(info) => this.handlePortfolioClick(info)} 
+        onHome={(info) => this.onHome(info)}/>
       </div>
     );
 
@@ -28,33 +25,18 @@ class App extends Component {
   handlePortfolioClick(info) {
     if (info === "Video") {
       this.setState({
-        cWidth: '100vw',
-        cHeight: '100vh',
-        marginLeft: '0vw',
-        marginTop: '0vh',
-        transform: 'translate(0px, 0vh)',
-        radius: '0'
+        VIEW: "PORTFOLIO",
       });
     } else if (info === "Web Development") {
       this.setState({
-        cWidth: '100vw',
-        cHeight: '100vh',
-        marginLeft: '0vw',
-        marginTop: '0vh',
-        transform: 'translate(0px, 0vh)',
-        radius: '0'
+        VIEW: "PORTFOLIO",
       });
     }
   }
 
   onHome() {
     this.setState({
-      cWidth: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vw',
-      cHeight: (window.matchMedia("(min-width: 550px)").matches) ? '500px' : '100vh',
-      marginLeft: (window.matchMedia("(min-width: 550px)").matches) ? '50vw' : '0',
-      marginTop: (window.matchMedia("(min-width: 550px)").matches) ? '50vh' : '0',
-      transform: (window.matchMedia("(min-width: 550px)").matches) ? 'translate(-250px, 15vh)' : 'none',
-      radius: (window.matchMedia("(min-width: 550px)").matches) ? '80px' : '0'
+      VIEW: "HOME"
   });
   }
 

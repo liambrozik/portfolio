@@ -16,18 +16,21 @@ class HomeBtn extends Component {
       onClick={(e) => this.onHome(e)}
       className="HomeBtn" 
       style={{
-          color: 'rgb(240, 67, 0)',
-          backgroundColor: this.state.bg,
-          fontSize: '34px',
-          position: 'absolute',
-          width: '45px',
-          height: '45px',
-          top: this.props.top,
-          borderRadius: '50%',
-          paddingTop: '1px',
-          left: '12vw',
-          cursor: 'pointer',
-          transition: 'background-color 1s, top 1s, left 1s, color 1s'
+        color: 'rgb(240, 67, 0)',
+        backgroundColor: this.state.bg,
+        fontSize: '34px',
+        position: 'absolute',
+        width: '45px',
+        height: '45px',
+        borderRadius: '50%',
+        paddingTop: '1px',
+        left: '12vw',
+        cursor: 'pointer',
+        
+        top: this.props.VIEW === "HOME" ? '-100px' : '19px',
+
+        willChange: 'top',
+        transition: 'background-color 1s, top 2500ms, left 2500ms, color 1s'
       }}>
         <script src="https://use.fontawesome.com/0cae086453.js"></script>
         <i className="fa fa-home" aria-hidden="true"></i>
