@@ -1,3 +1,41 @@
 .Container {
-    
+    overflow: hidden;
+    will-change: width, height, margin-left, margin-top, border-radius, background-color, transform, color;
+    transition: width 1000ms, height 1000ms, margin-left 1000ms, border-radius 1000ms, transform 1000ms, background-color 1000ms, color 1000ms;
+}
+
+.Container.HOME {
+    width: 500px;
+    height: 500px;
+    margin-left: 50vw;
+    transform: translate(-250px, 15vh);
+    border-radius: 80px;
+}
+
+.Container.PORTFOLIO {
+    width: 100vw;
+    height: 100vh;
+    margin-left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+}
+
+@media (max-width: 550px) {
+    .Container.HOME {
+        width: 100vw;
+        height: 100vh;
+        margin-left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+}
+
+.Container.DARK {
+    background-color: rgb(15, 15, 15);
+    color: rgb(220, 220, 220);
+}
+
+.Container.LIGHT {
+    background-color: rgb(220, 220, 220);
+    color: rgb(37, 37, 37);
 }

@@ -1,0 +1,39 @@
+.HomeBtn {
+    color: rgb(240, 67, 0);
+    background-color: transparent;
+    font-size: 34px;
+    position: absolute;
+    z-index: 50;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding-top: 1px;
+    left: 15vw;
+    cursor: pointer;
+    will-change: top, left;
+    transition: background-color 200ms, top 2500ms, left 2500ms, color 1s;
+}
+
+.HomeBtn:hover {
+    background-color: rgba(250, 67, 0, 0.1);
+}
+
+.HomeBtn.HOME {
+    top: -100px;
+}
+
+.HomeBtn.PORTFOLIO {
+    top: 19px;
+}
+
+@media (max-width: 550px) {
+    .HomeBtn {
+        display: none;
+    }
+}
+
+@media (min-width: 935px) {
+    .HomeBtn {
+        left: 20vw;
+    }
+}

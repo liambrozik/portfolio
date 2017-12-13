@@ -1,0 +1,69 @@
+.Title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: relative;
+    font-size: 30px;
+    height: 0px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid rgb(200, 200, 200);
+    will-change: margin-top, margin-left, width, color, opacity;
+    transition: margin-top 1s, margin-left 1s, width 1s, color 1s, opacity 500ms;
+}
+
+.Title.HOME {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-top: 25px;
+}
+
+.Title.PORTFOLIO {
+    width: 50%;
+    margin-top: -13px;
+    margin-left: 25%;
+}
+
+.TitleContent {
+    margin-top: -40px; 
+    margin-left: 50%;
+    background-color: rgb(220, 220, 220);
+    color: rgb(37, 37, 37);
+    will-change: transform, color, background-color;
+    transition: transform 1s, background-color 1s, color 1s;
+}
+
+.TitleContent.HOME {
+    width: 150px;
+    transform: translateX(-75px);
+}
+
+
+.TitleContent.PORTFOLIO.DARK {
+    background-color: rgb(15, 15, 15);
+    color: rgb(220, 220, 220);
+}
+
+.TitleContent.PORTFOLIO {
+    width: 350px;
+    transform: translateX(-175px);
+}
+
+.TitleContent.PORTFOLIO.LIGHT {
+    background-color: rgb(220, 220, 220);
+    color: rgb(37, 37, 37);
+}
+
+@media (max-width: 935px) {
+    .Title.PORTFOLIO {
+        top: -15px;
+        padding-top: 0px;
+        border: none;
+    }
+}
+
+@media (max-width: 492px) {
+    .Title.PORTFOLIO {
+        font-size: 20px;
+        top: -10px;
+    }
+}

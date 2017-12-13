@@ -1,4 +1,43 @@
+.Button {
+    background-color: rgb(200, 200, 200);
+    z-index: 50;
+    position: relative;
+    width: 180px;
+    height: 60px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 200ms, color 200ms, opacity 500ms;
+    border-bottom: 2px solid rgb(170, 170, 170);
+}
+
+.Button.HOME {
+    opacity: 1;
+}
+
+.Button.PORTFOLIO {
+    opacity: 0;
+}
+
 .Button:active, .Button:focus {
     outline: none;
     border-bottom: 0px;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background-color: rgb(189, 189, 189);
+}
+
+@media (max-width: 550px) {
+    .Button {
+        width: 75%;
+        margin-left: 12.5%;
+    }
 }

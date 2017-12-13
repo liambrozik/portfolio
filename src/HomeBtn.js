@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './HomeBtn.css';
 
 class HomeBtn extends Component {
     constructor(props) {
@@ -14,24 +15,7 @@ class HomeBtn extends Component {
       onMouseOver={() => this.onHover(true)}
       onMouseOut={() => this.onHover(false)}
       onClick={(e) => this.onHome(e)}
-      className="HomeBtn" 
-      style={{
-        color: 'rgb(240, 67, 0)',
-        backgroundColor: this.state.bg,
-        fontSize: '34px',
-        position: 'absolute',
-        width: '45px',
-        height: '45px',
-        borderRadius: '50%',
-        paddingTop: '1px',
-        left: '12vw',
-        cursor: 'pointer',
-        
-        top: this.props.VIEW === "HOME" ? '-100px' : '19px',
-
-        willChange: 'top',
-        transition: 'background-color 1s, top 2500ms, left 2500ms, color 1s'
-      }}>
+      className={"HomeBtn " + this.props.VIEW}>
         <script src="https://use.fontawesome.com/0cae086453.js"></script>
         <i className="fa fa-home" aria-hidden="true"></i>
 
