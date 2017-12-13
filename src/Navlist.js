@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavlistItem from './NavlistItem'
+import './Navlist.css'
 
 class Navlist extends Component {
     constructor(props) {
@@ -8,22 +9,7 @@ class Navlist extends Component {
     }
   render() {
     return (
-      <div className="Navlist" style={{
-        backgroundColor: 'rgba(0, 0, 0, 0.1)',
-        textAlign: 'left',
-        width: '170px',
-        marginTop: "15vh",
-        padding: '0px 10px 60px 10px',
-        borderRadius: '20px',
-
-        marginLeft: this.props.VIEW === "HOME" ? "-50vw" 
-        : (window.matchMedia("(min-width: 1350px)").matches) ? '7.5vw' 
-        : (window.matchMedia("(max-width: 1015px)").matches) ? '1vw' 
-        : '3vw',
-        
-        willChange: 'margin-left',
-        transition: 'margin-left 2500ms'
-      }}>
+      <div className={"Navlist " + this.props.VIEW}>
         {this.props.text}
 
       <NavlistItem 

@@ -1,0 +1,31 @@
+.Content {
+    background-color: rgba(194, 194, 194, 0.5);
+    text-align: left;
+    font-size: 20px;
+    width: 90%;
+    height: 500px;
+    position: relative;
+    margin-left: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 40px;   
+    will-change: transform, margin-left, width;
+    transition: transform 1000ms, margin-left 1000ms, width 1000ms;
+}
+
+.Content.HOME {
+    transform: translate(-50%, 100vh);
+}
+
+.Content.PORTFOLIO {
+   transform: translate(-50%, 0);
+}
+
+@media (max-width: 935px) {
+    .Content.PORTFOLIO {
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+        border-radius: 0px;
+        transform: translate(0, 0);
+    }
+}

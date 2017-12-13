@@ -1,0 +1,39 @@
+.Navlist {
+background-color: rgba(0, 0, 0, 0.1);
+text-align: left;
+width: 170px;
+margin-top: 15vh;
+padding: 0px 10px 60px 10px;
+border-radius: 20px;
+will-change: margin-left;
+transition: margin-left 2500ms;
+
+}
+
+.Navlist.HOME {
+    margin-left: -50vw;
+    transition: margin-left 2500ms;
+}
+
+.Navlist.PORTFOLIO {
+    margin-left: 7.5vw;
+    transition: margin-left 2500ms;
+}
+
+@media (max-width: 1350px) {
+    .Navlist.PORTFOLIO {
+        margin-left: 3vw;
+    }
+}
+
+@media (max-width: 1015px) {
+    .Navlist.PORTFOLIO {
+        margin-left: 1vw;
+    }
+}
+
+@media (max-width: 935px) {
+    .Navlist.PORTFOLIO {
+        display: none;
+    }
+}

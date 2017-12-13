@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Container from './Container.js';
+import Menu from './Menu.js';
 
 class App extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class App extends Component {
 
     this.state = {
         VIEW: "HOME",
+        scheme: "LIGHT"
     };
   }
 
@@ -15,8 +17,9 @@ class App extends Component {
     return (
       <div className="App" style={{backgroundColor: 'rgb(235, 235, 235)'}}>
         <Container VIEW={this.state.VIEW} 
-        handleClick={(info) => this.handlePortfolioClick(info)} 
+        scheme={this.state.scheme} handleClick={(info) => this.handlePortfolioClick(info)} 
         onHome={(info) => this.onHome(info)}/>
+        <Menu VIEW={this.state.VIEW} scheme={this.state.scheme} />
       </div>
     );
 
@@ -26,17 +29,20 @@ class App extends Component {
     if (info === "Video") {
       this.setState({
         VIEW: "PORTFOLIO",
+        scheme: "DARK"
       });
     } else if (info === "Web Development") {
       this.setState({
         VIEW: "PORTFOLIO",
+        scheme: "LIGHT"
       });
     }
   }
 
   onHome() {
     this.setState({
-      VIEW: "HOME"
+      VIEW: "HOME",
+      scheme: "LIGHT"
   });
   }
 

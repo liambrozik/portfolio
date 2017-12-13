@@ -8,8 +8,8 @@ class NavlistItem extends Component {
       onMouseOut={() => this.onHover(false)}
       className="NavlistItem" 
       style={{
-          color: this.props.current ? 'rgb(255, 67, 0)': 'rgb(48, 48, 48)',
-          borderBottom: this.props.current ? '3px solid rgba(0, 79, 122, 0.3)': 'none',
+          color: this.props.current ? 'rgb(255, 67, 0)': 'rgb(80, 80, 80)',
+          borderBottom: this.props.current ? '3px solid rgb(0, 165, 255)': 'none',
           fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
           fontSize: '20px',
           fontWeight: '700',

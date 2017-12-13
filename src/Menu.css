@@ -1,0 +1,81 @@
+.Menu {
+    position: fixed;
+    top: 0;
+    transition: left 500ms;
+    width: 200px;
+    height: 100vh;
+    z-index: 100;
+}
+
+.MenuFade {
+    position: fixed;
+    z-index: -10;
+    width: 120vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: opacity 200ms;
+}
+
+.MenuFade.true {
+    opacity: 1;
+}
+
+.MenuFade.false {
+    opacity: 0;
+}
+
+.MenuFade.HOME {
+    display: none;
+}
+
+.Menu.true {
+    left: 0;
+}
+
+.Menu.LIGHT {
+    background-color: rgb(200, 200, 200);
+}
+
+.Menu.DARK {
+    background-color: rgb(50, 50, 50);
+}
+
+.Menu.false {
+    left: -200px;
+}
+
+
+.MenuBtn {
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    margin: 0px 5px 5px 0px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 200ms;
+}
+
+.MenuBtn.HOME {
+    display: none;
+}
+
+.MenuBtn.LIGHT {
+    color: rgb(37, 37, 37);
+}
+
+.MenuBtn.DARK {
+    color: rgb(220, 220, 220);
+}
+
+.MenuBtn:active, .MenuBtn:focus {
+    border: none;
+    outline: none;
+}
+
+.MenuBtn.LIGHT:hover {
+    background-color: rgb(202, 202, 202);
+}
