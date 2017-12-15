@@ -9,7 +9,8 @@
     height: 500px;
     margin-left: 50vw;
     transform: translate(-250px, 15vh);
-    border-radius: 80px;
+    border-radius: 5px;
+
 }
 
 .Container.PORTFOLIO {
@@ -17,7 +18,7 @@
     height: 100vh;
     margin-left: 0;
     transform: translate(0, 0);
-    border-radius: 0;
+    border-radius: 0px;
 }
 
 @media (max-width: 550px) {
@@ -36,6 +37,6 @@
 }
 
 .Container.LIGHT {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(235, 235, 235);
     color: rgb(37, 37, 37);
 }

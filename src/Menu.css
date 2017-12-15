@@ -2,30 +2,34 @@
     position: fixed;
     top: 0;
     transition: left 500ms;
-    width: 200px;
+    width: 35vw;
     height: 100vh;
     z-index: 100;
+    padding-top: 75px;
 }
 
 .MenuFade {
     position: fixed;
     z-index: -10;
-    width: 120vw;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 135vw;
+    height: 120vh;
+    margin-top: -10vh;
+    background-color: rgba(255, 255, 255, 0.7);
     transition: opacity 200ms;
 }
 
 .MenuFade.true {
+    display: block;
     opacity: 1;
 }
 
 .MenuFade.false {
     opacity: 0;
+    display: none;
 }
 
 .MenuFade.HOME {
-    display: none;
+    
 }
 
 .Menu.true {
@@ -41,18 +45,19 @@
 }
 
 .Menu.false {
-    left: -200px;
+    left: -35vw;
 }
 
 
 .MenuBtn {
     background-color: transparent;
+    border-radius: 1px;
     border: none;
     position: fixed;
     top: 0;
     left: 0;
-    height: 70px;
-    width: 70px;
+    height: 75px;
+    width: 75px;
     margin: 0px 5px 5px 0px;
     cursor: pointer;
     font-size: 24px;
@@ -78,4 +83,22 @@
 
 .MenuBtn.LIGHT:hover {
     background-color: rgb(202, 202, 202);
+}
+
+@media (max-width: 625px) {
+    .Menu {
+        width: 75vw;
+    }
+    .Menu.false {
+        left: -75vw;
+    }
+}
+
+@media (max-width: 550px) {
+    .Menu {
+        width: 85vw;
+    }
+    .Menu.false {
+        left: -85vw;
+    }
 }

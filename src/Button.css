@@ -1,5 +1,5 @@
 .Button {
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(223, 223, 223);
     z-index: 50;
     position: relative;
     width: 180px;
@@ -12,9 +12,10 @@
     margin-left: 50px;
     margin-top: 10px;
     cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 200ms, color 200ms, opacity 500ms;
-    border-bottom: 2px solid rgb(170, 170, 170);
+    border-radius: 5px;
+    transition: background-color 200ms, color 200ms, opacity 500ms, border-bottom 200ms;
+    border: 0px;
+    border-bottom: 1px solid rgb(0, 165, 255);
 }
 
 .Button.HOME {
@@ -31,8 +32,9 @@
 }
 
 .Button:hover {
+    background-color: rgb(230, 230, 230);
     cursor: pointer;
-    background-color: rgb(189, 189, 189);
+    border-bottom: 4px solid  rgb(255, 116, 70);
 }
 
 @media (max-width: 550px) {

@@ -3,8 +3,8 @@ background-color: rgba(0, 0, 0, 0.1);
 text-align: left;
 width: 170px;
 margin-top: 15vh;
-padding: 0px 10px 60px 10px;
-border-radius: 20px;
+padding: 0px;
+border-radius: 5px;
 will-change: margin-left;
 transition: margin-left 2500ms;
 

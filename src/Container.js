@@ -7,7 +7,6 @@ import Title from './Title.js';
 import Button from './Button.js';
 import Navlist from './Navlist.js';
 import ContentZone from './ContentZone.js';
-import HomeBtn from './HomeBtn.js';
 
 class Container extends Component {
     constructor(props) {
@@ -32,16 +31,12 @@ class Container extends Component {
             scheme={this.props.scheme}
         />
 
-        <HomeBtn 
-            VIEW={this.props.VIEW}
-            onHome={() => this.onHome()}
-        /> 
         <About
                 VIEW={this.props.VIEW}
         /> 
         <Title 
             VIEW={this.props.VIEW}
-            text={this.state.mode} 
+            text={this.props.mode} 
             scheme={this.props.scheme}
         />
         <Button 
@@ -78,15 +73,6 @@ class Container extends Component {
             mode: info
       })
     }
-
-    onHome() {
-        this.props.onHome();
-        this.setState({
-            bgcolor: 'rgb(220, 220, 220)',
-            color: 'rgb(37, 37, 37)', 
-            mode: 'Portfolios'
-        });
-    };
 }
 
 export default Container;

@@ -2,16 +2,127 @@
     background-color: rgba(194, 194, 194, 0.5);
     text-align: left;
     font-size: 20px;
-    width: 90%;
-    height: 500px;
+    width: 55%;
+    height: 520px;
     position: relative;
     margin-left: 50%;
-    padding: 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     margin-top: 40px;   
     will-change: transform, margin-left, width;
     transition: transform 1000ms, margin-left 1000ms, width 1000ms;
 }
+
+.Content img {
+    margin-top: -20px;
+    margin-left: 12.5vw;
+    width: 30vw;
+    height: 16.40625vw;
+}
+
+.Content h1 {
+    padding-top: 8px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin-bottom: 40px;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(202, 202, 202);
+}
+
+.Content p {
+    margin-left: 12.5vw;
+    width: 30vw;
+    font-weight: 300;
+}
+
+.Content i {
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+    transition: color 200ms;
+    top: 10px; 
+    right: 10px;
+}
+
+.Content i:hover {
+    color: rgb(0, 162, 255);
+}
+
+.Content .outlink {
+    position: absolute;
+    top: -2px;
+    right: -40px;
+
+    transform: scale(0.5, 0.5);
+}
+
+@media (max-width: 1300px) {
+    .Content img {
+        margin-left: 7.5vw;
+        width: 40vw;
+        height: 21.875vw;
+    }
+    
+    .Content p {
+        margin-left: 7.5vw;
+        width: 40vw;
+    }
+}
+
+@media (max-width: 935px) {
+    .Content img {
+        margin-left: 20vw;
+        width: 60vw;
+        height: 32.8125vw;
+    }
+
+    .Content p {
+        margin-left: 20vw;
+        width: 60vw;
+    }
+
+}
+
+@media (max-width: 625px) {
+    .Content img {
+        margin-left: 10vw;
+        width: 80vw;
+        height: 43.75vw;
+    }
+
+    .Content p {
+        margin-left: 10vw;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .Content img {
+        margin-left: 5vw;
+        width: 90vw;
+        height: 49.21875vw;
+    }
+
+    .Content p {
+        margin-left: 5vw;
+        width: 90vw;
+    }
+
+    .Content i {
+        top: 440px;
+        right: 50%;
+        font-size: 64px;
+        transform: translateX(-10px);
+    }
+
+    .Content .outlink {
+        top: -18px;
+        left: 80px;
+        transform: scale(1, 1);
+    }
+}
+
 
 .Content.HOME {
     transform: translate(-50%, 100vh);

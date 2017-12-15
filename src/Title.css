@@ -21,12 +21,14 @@
     width: 50%;
     margin-top: -13px;
     margin-left: 25%;
+    border: none;
 }
 
 .TitleContent {
     margin-top: -40px; 
     margin-left: 50%;
-    background-color: rgb(220, 220, 220);
+    border: none;
+    background-color: rgb(235, 235, 235);
     color: rgb(37, 37, 37);
     will-change: transform, color, background-color;
     transition: transform 1s, background-color 1s, color 1s;
@@ -49,11 +51,11 @@
 }
 
 .TitleContent.PORTFOLIO.LIGHT {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(235, 235, 235);
     color: rgb(37, 37, 37);
 }
 
-@media (max-width: 935px) {
+@media (max-width: 1100px) {
     .Title.PORTFOLIO {
         top: -15px;
         padding-top: 0px;
@@ -61,9 +63,15 @@
     }
 }
 
+@media (max-width: 625px) {
+    .Title.PORTFOLIO {
+        top: 59px;
+    }
+}
+
 @media (max-width: 492px) {
     .Title.PORTFOLIO {
         font-size: 20px;
-        top: -10px;
+        top: 63px;
     }
 }
