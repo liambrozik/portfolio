@@ -14,17 +14,17 @@ class Navlist extends Component {
 
       <NavlistItem 
         text={this.props.mode === "Web Development" ? "Projects" : "Solo"} 
-        current={this.props.current === "1" ? true : false}
+        current={this.props.current === "1" ? "true" : "false"}
       />
       <NavlistItem 
         text={this.props.mode === "Web Development" ? "Code Samples" : "Editing"}  
-        current={this.props.current === "2" ? true : false}
+        current={this.props.current === "2" ? "true" : "false"}
       />
       {
       this.props.mode === "Web Development" ? 
         <NavlistItem 
           text="Education" 
-          current={this.props.current === "3" ? true : false}
+          current={this.props.current === "3" ? "true" : "false"}
         /> 
       : null
       }

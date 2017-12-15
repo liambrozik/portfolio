@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Menu.css';
+import NavlistItem from './NavlistItem.js'
 
 class Menu extends Component {
     constructor(props) {
@@ -15,6 +16,20 @@ class Menu extends Component {
                 <button className={"MenuBtn " + this.props.VIEW + " " + this.props.scheme} onClick={(status) => this.onMenuBtnClick(this.state.open)}>
                 {(this.state.open) === "true" ? <i class="fa fa-times" aria-hidden="true"></i> : <i class="fa fa-bars" aria-hidden="true"></i> }
                 </button>
+                <NavlistItem 
+                onClick={(page) => this.onClick(page)}
+                context="menu" 
+                current={"false"} 
+                text="Home"/>
+                <NavlistItem 
+                onClick={(page) => this.onClick(page)}
+                context="menu" 
+                current={this.props.mode === "Web Development" ? "true" : "false"} 
+                text="Web Development"/>
+                <NavlistItem 
+                onClick={(page) => this.onClick(page)}
+                context="menu" 
+                current={this.props.mode === "Video" ? "true" : "false"}  text="Video"/>
             </div>
         );
     }
@@ -29,6 +44,13 @@ class Menu extends Component {
         this.setState({
             open: menuOpen
         });
+    }
+
+    onClick(info) {
+        this.setState({
+            open: "false"
+        });
+        this.props.onClick(info);
     }
 }
 

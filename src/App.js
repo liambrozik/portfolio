@@ -9,17 +9,27 @@ class App extends Component {
 
     this.state = {
         VIEW: "HOME",
-        scheme: "LIGHT"
+        scheme: "LIGHT",
+        mode: "Portfolios"
     };
   }
 
   render() {
     return (
-      <div className="App" style={{backgroundColor: 'rgb(235, 235, 235)'}}>
-        <Container VIEW={this.state.VIEW} 
-        scheme={this.state.scheme} handleClick={(info) => this.handlePortfolioClick(info)} 
-        onHome={(info) => this.onHome(info)}/>
-        <Menu VIEW={this.state.VIEW} scheme={this.state.scheme} />
+      <div className="App" style={{backgroundColor: 'rgb(255, 255, 255)'}}>
+        <Container 
+          VIEW={this.state.VIEW} 
+          scheme={this.state.scheme} 
+          handleClick={(info) => this.handlePortfolioClick(info)} 
+          onHome={(info) => this.onHome(info)}
+          mode={this.state.mode}
+        />
+        <Menu 
+          VIEW={this.state.VIEW} 
+          scheme={this.state.scheme} 
+          mode={this.state.mode}
+          onClick={(info) => this.handlePortfolioClick(info)}
+        />
       </div>
     );
 
@@ -29,11 +39,19 @@ class App extends Component {
     if (info === "Video") {
       this.setState({
         VIEW: "PORTFOLIO",
+        mode: "Video",
         scheme: "DARK"
       });
     } else if (info === "Web Development") {
       this.setState({
         VIEW: "PORTFOLIO",
+        mode: "Web Development",
+        scheme: "LIGHT"
+      });
+    } else {
+      this.setState({
+        VIEW: "HOME",
+        mode: "Portfolios",
         scheme: "LIGHT"
       });
     }
@@ -42,9 +60,11 @@ class App extends Component {
   onHome() {
     this.setState({
       VIEW: "HOME",
+      mode: "Portfolios",
       scheme: "LIGHT"
   });
   }
+
 
 }
 
