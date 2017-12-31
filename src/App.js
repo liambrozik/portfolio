@@ -1,69 +1,62 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import './App.css';
 import Container from './Container.js';
-import Menu from './Menu.js';
+import Feature from './Feature.js';
+import Footer from './Footer.js';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
+
     this.state = {
-        VIEW: "HOME",
-        scheme: "LIGHT",
-        mode: "Portfolios"
+      height: "0",
+      past: false,
+      prog: null
     };
   }
 
   render() {
     return (
-      <div className="App" style={{backgroundColor: 'rgb(255, 255, 255)'}}>
+      <div 
+        className="App" ref="alpha" style={{backgroundColor: 'rgb(255, 255, 255)'}}>
         <Container 
-          VIEW={this.state.VIEW} 
-          scheme={this.state.scheme} 
-          handleClick={(info) => this.handlePortfolioClick(info)} 
-          onHome={(info) => this.onHome(info)}
-          mode={this.state.mode}
         />
-        <Menu 
-          VIEW={this.state.VIEW} 
-          scheme={this.state.scheme} 
-          mode={this.state.mode}
-          onClick={(info) => this.handlePortfolioClick(info)}
+        <Feature 
+          prog={this.state.prog}
+          feat="TripTunes"
         />
+        <Feature 
+          prog={this.state.prog}
+          feat="Chattr"
+        />
+        <Footer />
       </div>
+      
     );
 
   }
 
-  handlePortfolioClick(info) {
-    if (info === "Video") {
-      this.setState({
-        VIEW: "PORTFOLIO",
-        mode: "Video",
-        scheme: "DARK"
-      });
-    } else if (info === "Web Development") {
-      this.setState({
-        VIEW: "PORTFOLIO",
-        mode: "Web Development",
-        scheme: "LIGHT"
-      });
-    } else {
-      this.setState({
-        VIEW: "HOME",
-        mode: "Portfolios",
-        scheme: "LIGHT"
-      });
-    }
-  }
 
-  onHome() {
-    this.setState({
-      VIEW: "HOME",
-      mode: "Portfolios",
-      scheme: "LIGHT"
-  });
-  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      if ($(window).scrollTop() >= ($(window).height()/8)) {
+        this.setState({
+          past: true, 
+          prog: "one"
+        });
+      } else {
+        this.setState({
+          past: false
+        });
+      }
+      this.setState({
+        height: $(window).scrollTop()
+      });
+    });
+  } 
 
 
 }

@@ -1,0 +1,14 @@
+.Infos {
+    width: 80%;
+    margin-left: 12.5%;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.Infos p b {
+    margin-top: -50px;
+}
+
+.Infos.BTS {
+    margin-top: -20px;
+}

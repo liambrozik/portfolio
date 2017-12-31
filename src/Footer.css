@@ -1,0 +1,117 @@
+.Footer {
+    font-family: "omnes-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100vw;
+    background-color: rgb(0, 57, 95);
+    margin-top: 15px;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+    transition: height 500ms;
+    overflow: hidden;
+}
+
+.Footer.false {
+    height: 70px;
+}
+
+.Footer.true {
+    height: 600px;
+}
+
+.Footer a {
+    position: absolute;
+    color: rgb(255, 217, 0);
+    margin-left: 5vw;
+    margin-top: 14px;
+    font-weight: 700;
+    transition: color 200ms;
+}
+
+.Footer .Infos a {
+    position: relative;
+    margin-left: 0vw;
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.Footer a:hover {
+    color: rgb(0, 140, 255);
+}
+
+.Footer span i {
+    margin-right: 5px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+
+.Footer .f {
+    font-size: 36px;
+    color: rgb(255, 217, 0);
+    margin: 12px 5px 0px 5px;
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.Footer p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.Footer i:hover, #BTSgh:hover {
+    cursor: pointer;
+    color: rgb(0, 140, 255);
+}
+
+/* BTS */
+
+.BTS {
+    color: white;
+    width: 60vw;
+    margin-left: 20vw;
+}
+
+.BTS h1 {
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 48px;
+
+}
+
+#BTSTech {
+    position: relative;
+    margin-left: 45%;
+    top: -30px;
+}
+
+
+
+#BTSgh {
+    text-align: center;
+    color: rgb(255, 217, 0);
+    margin-left: 50%;
+    font-size: 72px;
+    transform: translateX(-36px);
+    transition: color 200ms;
+}
+
+
+#BTSclose {
+    border: none;
+    background: none;
+}
+
+#BTSclose i {
+    color: rgb(255, 217, 0);
+}
+
+#BTSclose i:hover {
+    color: rgb(0, 140, 255);
+}
+
+#BTSclose:focus, #BTSclose:active {
+    outline: none;
+    border: none;
+}
