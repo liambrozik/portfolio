@@ -6,16 +6,17 @@
     vertical-align: top;
 }
 
-.Info.BTS {
-    text-align: center;
-    margin-left: -35.5%;
-}
-
-
-
 
 .Info p {
     width: 100%;
+}
+
+.Info.BTS p {
+    text-align: left;
+}
+
+.Info.BTS {
+    width: 60%;
 }
 
 .Info i {
@@ -34,4 +35,19 @@
 .Info b {
     font-size: 24px;
     font-weight: 900;
+}
+
+@media (max-width: 667px) {
+    .Info, .Info.BTS {
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    .Info {
+        width: 95%;
+    }
+    .Info.BTS {
+        width: 95%;
+        margin-left: -7.5%;
+    }
 }

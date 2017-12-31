@@ -42,3 +42,20 @@
 .Links a:hover {
     background-color: rgb(255, 187, 0);
 }
+
+@media (max-width: 500px) {
+    .Links a {
+        display: block;
+        height: 50px;
+        width: 90%;
+        padding: 0px 10px 25px 10px;
+        text-align: left;
+    }
+    .Links {
+        margin-left: 5%;
+    }
+    .Links a i {
+        top: 12px;
+        left: -8px;
+    }
+}

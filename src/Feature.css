@@ -11,12 +11,12 @@
 }
 
 .Feature.TripTunes {
-    background: linear-gradient(rgb(103, 194, 255), rgb(66, 170, 255));
+    background: linear-gradient(rgb(236, 236, 236), rgb(221, 221, 221));
     color: rgb(37, 37, 37);
 }
 
 .Feature.Chattr {
-    background: linear-gradient(rgb(254, 220, 255), rgb(253, 207, 255));
+    background: linear-gradient(rgb(236, 236, 236), rgb(221, 221, 221));
     color: rgb(37, 37, 37);
 }
 
@@ -36,4 +36,29 @@
     top: 130px; 
     width: 100%;
     text-align: center;
+}
+
+@media (max-width: 1565px) {
+    .Feature {
+        width: 60vw;
+        margin-left: 20vw;
+    }
+}
+@media (max-width: 1300px) {
+    .Feature {
+        width: 70vw;
+        margin-left: 15vw;
+    }
+}
+@media (max-width: 1115px) {
+    .Feature {
+        width: 80vw;
+        margin-left: 10vw;
+    }
+}
+@media (max-width: 976px) {
+    .Feature {
+        width: 95vw;
+        margin-left: 2.5vw;
+    }
 }
