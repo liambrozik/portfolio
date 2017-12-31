@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://liambrozik.github.io/portfolio",
+  "homepage": "http://www.liambrozik.com/",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "jquery": "^3.2.1",
