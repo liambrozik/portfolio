@@ -6,8 +6,8 @@ class Avatar extends Component {
     return (
       <img 
       src="https://i.imgur.com/2C9b1l0.png"
-      height={this.props.VIEW === "HOME" ? '125' : '65'} 
-      width={this.props.VIEW === "HOME" ? '125' : '65'} 
+      height={'125'} 
+      width={'125'} 
       alt="Liam Brozik" 
       className={"Avatar "+ this.props.VIEW}/>
 

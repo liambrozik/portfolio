@@ -1,0 +1,39 @@
+.Feature {
+    position: relative;
+    min-height: 50vw;
+    width: 50vw;
+    margin-left: 25vw;
+    margin-top: 15px;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.329);
+    border-radius: 5px;
+    padding-bottom: 25px;
+    font-family: "omnes-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.Feature.TripTunes {
+    background: linear-gradient(rgb(103, 194, 255), rgb(66, 170, 255));
+    color: rgb(37, 37, 37);
+}
+
+.Feature.Chattr {
+    background: linear-gradient(rgb(254, 220, 255), rgb(253, 207, 255));
+    color: rgb(37, 37, 37);
+}
+
+.Feature h2 {
+    padding-top: 50px;
+    font-weight: 1200;
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+    opacity: 1;
+    position: relative;
+    font-weight: 100;
+}
+
+.TechBox {
+    position: absolute;
+    top: 130px; 
+    width: 100%;
+    text-align: center;
+}

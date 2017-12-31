@@ -1,0 +1,42 @@
+.Card {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px;
+    height: 200px;
+    width: 210px;
+    color: white;
+    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.329);
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+}
+
+.Card.TripTunes {
+    background-color: rgb(0, 91, 151);
+}
+
+.Card.Chattr {
+    background-color: rgb(129, 0, 141);
+}
+
+.Card i {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 64px;
+    color: rgb(255, 208, 0);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.Card.TripTunes i {
+    border-bottom: 5px solid rgb(63, 172, 255);
+}
+
+.Card.Chattr i {
+    border-bottom: 5px solid rgb(253, 207, 255);
+}
+
+
+.Card p {
+    font-weight: 300;
+    border-radius: 5px;
+}
