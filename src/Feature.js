@@ -23,8 +23,8 @@ class Feature extends Component {
             <Tech text="API" order={this.props.prog === "one" ? "two" : null}/>
             <Tech text="Node" order={this.props.prog === "one" ? "three" : null}/>
         </div>
-        <Infos feat={this.props.feat}/>
         <Links deploy="https://triptunes.now.sh" gh="https://github.com/liambrozik/Trip-Tunes" />
+        <Infos feat={this.props.feat}/>
         <Cards feat={this.props.feat}/>
       </div>
       : (this.props.feat === "Chattr") ?
@@ -34,8 +34,8 @@ class Feature extends Component {
           <Tech text="Firebase" order={this.props.prog === "one" ? "one" : null}/>
           <Tech text="Bootstrap" order={this.props.prog === "one" ? "two" : null}/>
       </div>
-      <Infos feat={this.props.feat}/>
       <Links deploy="https://challenge6-dae99.firebaseapp.com/" gh="https://github.com/liambrozik/Chattr" />
+      <Infos feat={this.props.feat}/>
       <Cards feat={this.props.feat}/>
     </div>
     : null

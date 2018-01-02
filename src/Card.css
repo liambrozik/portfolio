@@ -18,6 +18,10 @@
     background-color: rgb(129, 0, 141);
 }
 
+.Card b {
+    font-weight: 700;
+}
+
 .Card i {
     padding-bottom: 10px;
     padding-top: 10px;
@@ -39,4 +43,43 @@
 .Card p {
     font-weight: 300;
     border-radius: 5px;
+}
+@media (max-width: 1115px) {
+    .Card {
+        height: 150px;
+        width: 160px;
+    }
+    .Card i {
+        font-size: 48px;
+    }
+    .Card p {
+        margin-top: 2px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 667px) {
+    .Card {
+        height: 150px;
+        width: 50%;
+    }
+    .Card i {
+        font-size: 48px;
+    }
+    .Card p {
+        margin-top: 2px;
+        font-size: 16.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Card {
+        width: 75%;
+        height: 160px;
+        margin-top: -5px;
+    }
+
+    .Card p {
+        font-size: 18px;
+        margin-top: 5px;
+    }
 }

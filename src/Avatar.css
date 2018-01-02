@@ -8,4 +8,10 @@
 }
 
 
+@media (max-width: 500px) {
+    .Avatar {
+        top: 12vh;
+    }
+}
+
 

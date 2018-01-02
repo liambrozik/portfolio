@@ -1,9 +1,98 @@
 .Container {
     margin-left: 25vw;
     margin-top: 15px;
-    height: 50vw;
+    height: 80vh;
     width: 50vw;
     border-radius: 5px;
-    background:rgb(224, 224, 224);
+    background: linear-gradient(rgb(245, 245, 245), rgb(236, 236, 236));
     box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.329);
+}
+
+.signal {
+    font-family: "omnes-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    width: 50vw;
+    text-align: center;
+    bottom: 250px;
+    opacity: 1;
+    font-size: 24px;
+    color: gray;
+    transition: opacity 1s;
+}
+
+.signal.one {
+    opacity: 0;
+}
+
+.signal p {
+    margin: -5px;
+}
+
+.signal i {
+    font-size: 36px;
+}
+
+#arrow {
+    margin-top: -40px;
+    position: relative;
+    animation-name: amove;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes amove {
+    0% {top: 0}
+    50% {top: 15px}
+    100% {top: 0px}
+}
+
+@media (max-width: 1565px) {
+    .signal {
+        width: 60vw;
+    }
+    .Container {
+        width: 60vw;
+        margin-left: 20vw;
+    }
+}
+@media (max-width: 1300px) {
+    .signal {
+        width: 70vw;
+    }
+    .Container  {
+        width: 70vw;
+        margin-left: 15vw;
+    }
+}
+@media (max-width: 1115px) {
+    .signal {
+        width: 80vw;
+    }
+    .Container {
+        width: 80vw;
+        margin-left: 10vw;
+    }
+}
+@media (max-width: 976px) {
+    .signal {
+        width: 95vw;
+    }
+    .Container  {
+        width: 95vw;
+        margin-left: 2.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .Container {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+        background: rgb(245, 245, 245);
+    }
+
+    .signal {
+        bottom: 100px;
+    }
 }

@@ -1,6 +1,5 @@
 .Links {
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin-top: 40px;
     margin-left: 10%;
     width: 80%;
     text-align: center;
@@ -14,22 +13,21 @@
     border-bottom-left-radius: 50px;
     width: 200px;
     height: 200px;
-    text-decoration: none;
+    color: rgb(0, 153, 255);
     margin: 15px;
     font-size: 24px;
     padding: 10px 10px;
-    background-color: rgb(255, 217, 0);
-    color: rgb(66, 170, 255);
-    transition: background-color 200ms;
+
+    transition: color 200ms;
 }
 
 .Links a i {
-    font-size: 64px;
+    font-size: 30px;
     position: relative;
-    top: 14px;
-    left: -10px;
+    top: 4px;
+    left: 0px;
     line-height: 50px;
-    color: black;
+    color: rgb(0, 153, 255);
 }
 
 .Links a span {
@@ -40,5 +38,28 @@
 }
 
 .Links a:hover {
-    background-color: rgb(255, 187, 0);
+    color: rgb(0, 122, 204);
+}
+
+
+@media (max-width: 480px) {
+    .Links {
+        margin-bottom: 25px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .Links a {
+        margin: 1px;
+    }
+    .Links {
+        margin-left: 12%;
+    }
+}
+
+@media (max-width: 365px) {
+    .Links a i {
+        display: none;
+    }
 }

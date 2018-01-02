@@ -14,7 +14,7 @@ class Cards extends Component {
     return (
       this.props.feat === "TripTunes" ?
       <div className={"Cards "}>
-        <Card text={<p>Working with Nodejs and OAuth2 to create playlists with the <b>Spotify Web API</b></p>} icon={<i className="fa fa-volume-up" aria-hidden="true"></i>} 
+        <Card text={<p>Working with Nodejs and OAuth2 to create playlists with the <b>Spotify API</b></p>} icon={<i className="fa fa-volume-up" aria-hidden="true"></i>} 
         feat={this.props.feat}/>
         <Card text={<p>Using <b>Material Design</b> for a modern, consistent, and responsive interface</p>} icon={<i className="fa fa-th-large" aria-hidden="true"></i>} 
         feat={this.props.feat}/>

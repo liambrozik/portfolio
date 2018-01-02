@@ -8,7 +8,7 @@
     text-align: left;
     width: 300px;
     padding-top: 0px;
-    top: 25%;
+    top: 18vh;
     line-height: 8px;
     margin-left: 50%;
     transform: translateX(-150px);
@@ -19,6 +19,7 @@
 .About h1 {
     text-align: left;
     color: rgb(73, 73, 73);
+    border-radius: 5px;
     font-weight: 100;
     font-size: 64px;
 }
@@ -47,4 +48,17 @@
 
 .About i:hover {
     color: white;
+}
+
+@media (max-width: 500px) {
+    .About {
+        top: 11vh;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .About {
+        transform: scale(0.9, 0.9) translateX(-165px);
+    }
 }

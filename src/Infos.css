@@ -2,7 +2,7 @@
     width: 80%;
     margin-left: 12.5%;
     text-align: left;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .Infos p b {
@@ -10,5 +10,26 @@
 }
 
 .Infos.BTS {
-    margin-top: -20px;
+    width: 60%;
+    margin-left: 40%;
+    transform: translateX(-15%);
+}
+
+@media (max-width: 480px) {
+    .Infos {
+        width: 85%;
+        margin-left: 7.5%;
+    }
+    .Infos.BTS {
+
+
+    }
+}
+
+@media (max-width: 667px) {
+    .Infos.BTS {
+        width: 80%;
+        margin-left: 30%;
+        transform: translateX(-15%);
+    }
 }

@@ -6,16 +6,17 @@
     vertical-align: top;
 }
 
-.Info.BTS {
-    text-align: center;
-    margin-left: -35.5%;
-}
-
-
-
 
 .Info p {
     width: 100%;
+}
+
+.Info.BTS p {
+    text-align: left;
+}
+
+.Info.BTS {
+    width: 60%;
 }
 
 .Info i {
@@ -34,4 +35,35 @@
 .Info b {
     font-size: 24px;
     font-weight: 900;
+}
+
+@media (max-width: 667px) {
+    .Info, .Info.BTS {
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    .Info {
+        width: 95%;
+        margin-top: -20px;
+    }
+    .Info.BTS {
+        width: 95%;
+        margin-left: -7.5%;
+    }
+
+    .Info b {
+        font-size: 20px;
+        margin-top: -2px;
+    }
+
+    .Info i {
+        font-size: 24px;
+        width: 35px;
+        height: 29px;
+    }
+
+    .Info p {
+        margin-top: 3px;
+    }
 }

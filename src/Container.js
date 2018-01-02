@@ -16,6 +16,10 @@ class Container extends Component {
       <div className={"Container "}>
         <Avatar />
         <About />
+        <div className={"signal " + this.props.prog}>
+          <h6>Projects</h6>
+          <p id="arrow"><i className="fa fa-caret-down" aria-hidden="true"></i></p>
+        </div>
       </div>
     );
     }
