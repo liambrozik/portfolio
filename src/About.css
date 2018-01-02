@@ -50,6 +50,13 @@
     color: white;
 }
 
+@media (max-width: 500px) {
+    .About {
+        top: 11vh;
+    }
+}
+
+
 @media (max-width: 400px) {
     .About {
         transform: scale(0.9, 0.9) translateX(-165px);

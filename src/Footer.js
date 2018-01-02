@@ -4,9 +4,6 @@ import Tech from './Tech.js';
 import Infos from './Infos.js';
 
 class Footer extends Component {
-    constructor(props) {
-        super(props);
-    }
 
   render() {
     return (
@@ -17,7 +14,7 @@ class Footer extends Component {
             <i onClick={(info) => this.onLinkClick("ig")} className="f fa fa-instagram" aria-hidden="true"></i>
         </p>
         <div className={"BTS "}>
-            <h1>Portfolio</h1>
+            <h1>liambrozik.com</h1>
             <span id="BTSTech"><Tech text="React" order="one"/></span>
             <Infos feat="BTS" />
             <i id="BTSgh" onClick={(info) => this.onLinkClick("btsgh")} className="fa fa-github" aria-hidden="true"></i>

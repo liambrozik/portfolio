@@ -22,6 +22,7 @@ class App extends Component {
       <div 
         className="App" ref="alpha" style={{backgroundColor: 'rgb(255, 255, 255)'}}>
         <Container 
+        prog={this.state.prog}
         />
         <Feature 
           prog={this.state.prog}

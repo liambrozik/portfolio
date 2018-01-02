@@ -45,9 +45,25 @@
 @media (max-width: 480px) {
     .Info {
         width: 95%;
+        margin-top: -20px;
     }
     .Info.BTS {
         width: 95%;
         margin-left: -7.5%;
+    }
+
+    .Info b {
+        font-size: 20px;
+        margin-top: -2px;
+    }
+
+    .Info i {
+        font-size: 24px;
+        width: 35px;
+        height: 29px;
+    }
+
+    .Info p {
+        margin-top: 3px;
     }
 }

@@ -62,3 +62,31 @@
         margin-left: 2.5vw;
     }
 }
+
+@media (max-width: 480px) {
+    .Feature h2 {
+        padding-top: 25px;
+    }
+
+    .Feature {
+        width: 100vw;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .TechBox {
+        top: 95px; 
+    }
+
+    .Feature.TripTunes {
+        background: rgb(236, 236, 236);
+        color: rgb(37, 37, 37);
+    }
+
+    .Feature.Chattr {
+        background: rgb(221, 221, 221);
+        color: rgb(37, 37, 37);
+    }
+    
+}
